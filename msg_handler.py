@@ -21,33 +21,7 @@ def send_echo(message):
 		z = random.randint(0, len(users_list)-1)  # проверим, кто счастливчиком стал
 
 		# mesg[z:z+who_length] - тут берём подстроку от z+who_length-ого элемента включительно и до конца строки
-		bot.send_message(message.chat.id, users_list[z]+' сегодня '+mesg[z+who_length:])
-
-	"""if (mesg.find("кто сегодня") != -1) or (mesg.find("Кто сегодня") != -1):
-		z=random.randint(1,10)
-		if z==1:
-			bot.send_message(message.chat.id, "@Акакий"+mesg[3:])
-		elif z==2:
-			bot.send_message(message.chat.id, "@OneFake"+mesg[3:])
-		elif z==3:	
-			bot.send_message(message.chat.id, "@michele_giardino"+mesg[3:])
-		elif z==4:
-			bot.send_message(message.chat.id, "@rarity_meow"+mesg[3:])
-		elif z==5:	
-			bot.send_message(message.chat.id, "@json_guard"+mesg[3:])
-		elif z==6:
-			bot.send_message(message.chat.id, "@vikabubley"+mesg[3:])
-		elif z==7:	
-			bot.send_message(message.chat.id, "@ManifoldP"+mesg[3:])
-		elif z==8:
-			bot.send_message(message.chat.id, "@supermishkin3000"+mesg[3:])
-		elif z==9:	
-			bot.send_message(message.chat.id, "@dura40k"+mesg[3:])
-		elif z==10:
-			bot.send_message(message.chat.id, "@postpashka"+mesg[3:])"""
-
-
-		#bot.send_message(message.chat.id, "Ты"+mesg[3:])
+		bot.send_message(message.chat.id, users_list[z]+' сегодня 'mesg[who_search_result+who_length:].strip())
 
 	elif mesg.find("какой васян") != -1:
 		bot.send_message(message.chat.id, "С претензией :)")
